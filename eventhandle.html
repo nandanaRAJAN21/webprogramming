@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html><head>
+<title>Mouseover Color Change Example</title>
+<style>
+#color-div {
+Width: 200px;
+Height: 200px;
+Background-color: #8515ae;
+}
+A {
+Text-decoration: none;
+Color: #000;
+}
+A:hover {
+Color: rgb(131, 141, 21);
+}
+</style>
+</head>
+<body>
+ <div id=”color-div”></div>
+<a id=”color-link” href=”#”>Click me!</a>
+<script>
+Const colorDiv = document.getElementById(“color-div”);
+colorDiv.addEventListener(“mouseover”, function() {
+colorDiv.style.backgkgroundColor = “#8515ae”;
+});
+colorDiv.addEventListener(“mouseout”, function() {
+colorDiv.style.backgroundColor = “#f2a71a”;
+});
+Document.getElementById(“color-link”).addEventListener(“mouseover”, function() {
+This.style.color = “#0f0”;
+});
+Document.getElementById(“color-link”).addEventListener(“mouseout”, function() {
+This.style.color = “#000”;
+});
+Document.getElementById(“color-link”).addEventListener(“click”, function(event) {
+Event.preventDefault();
+This.style.color = “#00f”;
+});
+</script>
+</body>
+</html>
