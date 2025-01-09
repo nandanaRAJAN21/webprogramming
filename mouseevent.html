@@ -1,0 +1,77 @@
+<B>EVENT HANDLING</B>
+<button id="clickButton">Click Me!</button>
+<script>
+  document.getElementById("clickButton").addEventListener("click", function() {
+    alert("Button clicked!");
+  });
+</script>
+<div id="doubleClickArea" style="width: 200px; height: 100px; background-color: lightblue;">
+  Double-click me!
+</div>
+<script>
+  document.getElementById("doubleClickArea").addEventListener("dblclick", function() {
+    alert("Area double-clicked!");
+  });
+</script>
+<div id="mouseMoveArea" style="width: 300px; height: 200px; background-color: lightgreen;">
+  Move your mouse here!
+</div>
+<p id="coordinates"></p>
+<script>
+  document.getElementById("mouseMoveArea").addEventListener("mousemove", function(event) {
+    const x = event.clientX;
+    const y = event.clientY;
+    document.getElementById("coordinates").textContent = `X: ${x}, Y: ${y}`;
+  });
+</script>
+<div id="hoverArea" style="width: 250px; height: 150px; background-color: orange;">
+  Hover over me!
+</div>
+<script>
+  const hoverArea = document.getElementById("hoverArea");
+  
+  hoverArea.addEventListener("mouseenter", function() {
+    this.style.backgroundColor = "yellow";
+  });
+
+  hoverArea.addEventListener("mouseleave", function() {
+    this.style.backgroundColor = "orange";
+  });
+</script>
+<div id="hoverArea" style="width: 250px; height: 150px; background-color: orange;">
+  Hover over me!
+</div>
+<script>
+  const hoverArea = document.getElementById("hoverArea");
+  
+  hoverArea.addEventListener("mouseenter", function() {
+    this.style.backgroundColor = "yellow";
+  });
+
+  hoverArea.addEventListener("mouseleave", function() {
+    this.style.backgroundColor = "orange";
+  });
+</script>
+<div id="mouseButtonArea" style="width: 300px; height: 100px; background-color: lightcoral;">
+  Press and hold the mouse button here!
+</div>
+<script>
+  const mouseButtonArea = document.getElementById("mouseButtonArea");
+
+  mouseButtonArea.addEventListener("mousedown", function() {
+    this.style.backgroundColor = "red";
+  });
+
+  mouseButtonArea.addEventListener("mouseup", function() {
+    this.style.backgroundColor = "lightcoral";
+  });
+</script>
+<div id="wheelArea" style="width: 200px; height: 100px; background-color: lightgray;">
+  Scroll over me!
+</div>
+<script>
+  document.getElementById("wheelArea").addEventListener("wheel", function(event) {
+    event.preventDefault();
+    alert(`Scrolled ${event.deltaY > 0 ? "down" : "up"}`);
+  });
+</script>
