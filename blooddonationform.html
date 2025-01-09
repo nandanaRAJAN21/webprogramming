@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blood Donation Campaign Registration</title>
+</head>
+ <center>
+<body style="background-color: cyan;" >
+<img width="450px" height="350px"  src="./IMAGES/blood-donation-campaign-icon-HT9TKF.jpg"alt="Couldn't load the image">
+    <h2><B>Blood Donation Campaign</b></h2>
+    <!-- Add onsubmit to display an alert on form submission -->
+    <form action="#" method="post" onsubmit="alert('Registered Successfully'); return false;">
+        <!-- Full Name -->
+        <div>
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+
+        <!-- Email Address -->
+        <div>
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+
+        <!-- Contact Number -->
+        <div>
+            <label for="contact">Contact Number</label>
+            <input type="tel" id="contact" name="contact" required>
+        </div>
+
+        <!-- Blood Group -->
+        <div>
+            <label for="blood-group">Blood Group</label>
+            <select id="blood-group" name="blood-group" required>
+                <option value="" disabled selected>Select your blood group</option>
+                <option value="A+">A+</option>
+                <option value="A-">A-</option>
+                <option value="B+">B+</option>
+                <option value="B-">B-</option>
+                <option value="O+">O+</option>
+                <option value="O-">O-</option>
+                <option value="AB+">AB+</option>
+                <option value="AB-">AB-</option>
+            </select>
+        </div>
+
+        <!-- Age -->
+        <div>
+            <label for="age">Age</label>
+            <input type="number" id="age" name="age" required>
+        </div>
+
+        <!-- Address -->
+        <div>
+            <label for="address">Address</label>
+            <textarea id="address" name="address" rows="3" required></textarea>
+        </div>
+
+        <!-- Submit Button -->
+        <div>
+            <button type="submit">Register for Donation</button>
+        </div>
+    </form>
+</center>
+</body>
+</html>
